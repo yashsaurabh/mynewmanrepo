@@ -30,7 +30,7 @@ steps:
     testRunner: JUnit
     testResultsFiles: '**/test-results.xml'
 - task: PublishCodeCoverageResults@1
-  condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
   inputs:
     codeCoverageTool: cobertura
     summaryFileLocation: '**/cobertura-coverage.xml'
